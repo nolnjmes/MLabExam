@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login and Number Guessing Game</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="startGame()">Login</button>
+        </form>
+    </div>
+
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <h1>Number Guessing Game</h1>
+
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="userGuess" min="1" max="10">
+        <button onclick="checkGuess()">Submit Guess</button>
+
+        <div id="result"></div>
+
+        <button id="retryBtn" onclick="resetGame()" disabled>Retry</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
